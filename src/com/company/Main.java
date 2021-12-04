@@ -18,28 +18,28 @@ public class Main {
 
     private static String[] args;
 
-    // TODO Write Main functions specific to Main
+    // TODO: Create a checklist that will determine the formatting of the main menu and program flow
+    private static Boolean menuItemSelected = Boolean.FALSE; // Has a menu item been selected?
+    private static Boolean hasChildren = Boolean.FALSE;      // Has children been added?
+    private static Boolean hasChoreChart = Boolean.FALSE;    // Has a chore chart been created / loaded?
+
+    // TODO: Write Main functions specific to Main
     // TODO: Create Function that grabs all available chore charts
 
-    /*
 
-    public String viewTemplates(){
-        System.out.println("Bathroom Chores:");
-        System.out.println("------------------")
-        System.out.println(Arrays.toString(ChoreTemplates.getBathroomChart()));
-
-           }
-    */
-
-    public static void menuTree(){      // Decision Tree for creating the menu
-        Boolean menuItemSelected = Boolean.FALSE;
-        Boolean hasChildren = Boolean.FALSE;
-
-    }
+    // TODO: Create methods to change check variables
+    public static void setMenuItemSelectedTrue(){menuItemSelected = Boolean.TRUE;}
+    public static void setMenuItemSelectedFalse(){menuItemSelected = Boolean.FALSE;}
+    public static void setHasChildrenTrue(){ hasChildren = Boolean.TRUE;}
+    public static void setHasChildrenFalse(){ hasChildren = Boolean.FALSE;}
+    public static void setHasChoreChartTrue(){ hasChoreChart = Boolean.TRUE;}
+    public static void setHasChoreChartFalse(){ hasChoreChart  = Boolean.FALSE;}
 
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in); // Scanner object to get user input
+
+
 
 
 
