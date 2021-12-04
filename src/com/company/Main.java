@@ -10,6 +10,7 @@
  * @description: Main file that will control the program as a whole.
  */
 package com.company;
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -17,6 +18,10 @@ import java.util.Arrays;
 public class Main {
 
     private static String[] args;
+
+
+    // TODO: Define all constants
+
 
     // TODO: Create a checklist that will determine the formatting of the main menu and program flow
     private static Boolean menuItemSelected = Boolean.FALSE; // Has a menu item been selected?
@@ -36,8 +41,31 @@ public class Main {
     public static void setHasChoreChartFalse(){ hasChoreChart  = Boolean.FALSE;}
 
 
-    public static void main(String[] args) {
+    // TODO: Create methods to create custom chore list
+    public static ChoreChart setCustomChoreList(){
         Scanner scan = new Scanner(System.in); // Scanner object to get user input
+        Scanner listNum = new Scanner(System.in); // Scanner to get other input
+        System.out.println("Setting Custom list:");
+        System.out.println("How many items for this list?");
+        int listItems = listNum.nextInt();
+        String[] customChores = new String[listItems];
+
+        for (int i = 0; i < listItems; i++){
+            System.out.println("Enter for position: " + i);
+            customChores[i] = scan.nextLine();
+
+        }
+        ChoreChart customChart = new ChoreChart(customChores, "customChart1");
+        return customChart;
+    }
+
+
+    public static void main(String[] args) {
+
+
+
+
+
 
 
 
@@ -85,6 +113,14 @@ public class Main {
         System.out.println(Kitchen.getChoreList());
 
         System.out.println("-----------------------------------------------------------------------------");
+
+        ChoreChart chart = setCustomChoreList();
+        System.out.println(chart.getChoreList());
+        chart.setChartName("Custom Chart");
+        System.out.println(chart.getChartName());
+        System.out.println(chart.getChoreCount());
+
+
 
         //------------------------------------------- TESTING SECTION (CHILDREN) ---------------------------
 
