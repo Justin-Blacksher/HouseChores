@@ -86,7 +86,8 @@ public class Main {
 
 
 
-
+        // ---------------------------------- Testing Graphics ------------------------------------------
+        Graphics.EntryGraphic(); // Test to see if the Graphics class has passed
 
         // ---------------------------------- TESTING SECTION (chore chart) -----------------------------
 
