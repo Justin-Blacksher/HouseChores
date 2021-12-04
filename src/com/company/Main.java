@@ -1,3 +1,9 @@
+/**
+ * @author: Tiffany Blacksher
+ * @author: Justin Blacksher
+ * @Filename: Main.java
+ * @description: Main file that will control the program as a whole.
+ */
 package com.company;
 
 import java.util.Arrays;
@@ -50,7 +56,10 @@ public class Main {
         // --------------------------------------------- MAIN FUNCIONS ----------------------------------
         // TODO Write Main functions specific to Main
         // TODO: Create Function that grabs all available chore charts
-        /*public String viewTemplates(){
+
+        /*
+
+        public String viewTemplates(){
             System.out.println("Bathroom Chores:");
             System.out.println("------------------")
             System.out.println(Arrays.toString(ChoreTemplates.getBathroomChart()));

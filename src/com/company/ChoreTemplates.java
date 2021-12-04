@@ -1,3 +1,10 @@
+/**
+ * @author: Tiffany Blacksher
+ * @author: Justin Blacksher
+ * @Filename: ChoreTemplates.java
+ * @description: Available templates file for choreCharts
+ */
+
 package com.company;
 
 public class ChoreTemplates {

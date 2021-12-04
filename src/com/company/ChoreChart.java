@@ -1,7 +1,14 @@
+/**
+ * @author: Tiffany Blacksher
+ * @author: Justin Blacksher
+ * @Filename: ChoreChart.java
+ * @description: Creates the chore chart whether its default or its custom. Templates available.
+ */
+
 package com.company;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.concurrent.atomic.AtomicReferenceArray;
+
 
 public class ChoreChart {
 
@@ -29,7 +36,7 @@ public class ChoreChart {
 
     // TODO: Define a constructor that will take a custom chore list as a param
     public ChoreChart(String[] List, String chartName){
-        this.chartName = chartName;
+        this.chartName = chartName;                 // Bring in the chart name and set
 
         // Add the chores from the list into the choreList and update the chore count
         for (String s : List) {
