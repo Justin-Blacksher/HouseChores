@@ -22,6 +22,9 @@ public class ChoreChart {
     private ArrayList<String> choreList = new ArrayList<String>();
     // Initialize the count to zero
     private Integer choreCount = 0;
+    // Initialize the Chores done
+    private Integer choresDone = 0;
+
 
 
 
@@ -77,20 +80,34 @@ public class ChoreChart {
     public void setChoreCount(Integer choreCount) {
         this.choreCount = choreCount;
     }
+    public Integer getChoresDone() {
+        return choresDone;
+    }
 
+    public void setChoresDone(Integer choresDone) {
+        this.choresDone = choresDone;
+    }
 
     // ***************************** METHODS
-    // TODO: Define function to receive children object
-    // TODO: Define function that can add and remove chores from existing lists
-    // TODO: Define function that sets the default chore chart
+    // TODO: Define function to receive children object - Assigned Tiffany Blacksher
+    // TODO: Define function that can add and remove chores from existing lists - Assigned Tiffany Blacksher
+    // TODO: Define function that sets the default chore chart - Assigned Tiffany Blacksher
+    /*
+    THIS IS THE DEFAULT CONSTRUCTOR
+    - Generates a chorelist by default
+    - Sets the counter to the length of the default list
+    - Adds the Generated list into the ArrayList for this module
+    @author: Tiffany Blacksher
+    */
+
     public void SetDefaultChoreList(){          // Creates default chore list
         String[] defChores = {"Sweep and Mop", "Make Beds", "Dishes", "Garbage",
                               "Clean Bathroom", "Dust Rooms", "Remove dirt from wall by bed",
                               "Vacuum Room", "Homework", "Read 30 Minutes", "Clean under bed",
                               "Shower", "Brush Teeth", "Put away shoes", "Clean closets", "Organize clothes"
         };
-        this.choreCount = defChores.length;
-        Collections.addAll(choreList, defChores);
+        this.choreCount = defChores.length;         // This defines the chore count for accurate stats
+        Collections.addAll(choreList, defChores); // This statement merges the defChores list with the ArrayList
     }
 
 }

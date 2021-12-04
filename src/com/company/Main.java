@@ -45,7 +45,7 @@ public class Main {
 
 
 
-        // ---------------------------------- TESTING SECTION -----------------------------
+        // ---------------------------------- TESTING SECTION (chore chart) -----------------------------
 
         // TODO: MAKE TEST FUNCTIONS TO TEST FUNCTIONALITY OF ChoreTemplates
         // TODO: Test the functionality of the Default constructor
@@ -86,7 +86,7 @@ public class Main {
 
         System.out.println("-----------------------------------------------------------------------------");
 
-
+        //------------------------------------------- TESTING SECTION (CHILDREN) ---------------------------
 
 
     }
