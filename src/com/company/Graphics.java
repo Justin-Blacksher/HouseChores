@@ -4,7 +4,7 @@ public class Graphics {
 
     public static void EntryGraphic() {
 
-
+       // TODO: Split into two words maybe because it is so huge.
 
        System.out.println("sCCCCCCCCCCCCChhhhhhh                                                                                   CCCCCCCCCCCCChhhhhhh                                                           tttt");
        System.out.println("CCC::::::::::::Ch:::::h                                                                                CCC::::::::::::Ch:::::h                                                        ttt:::t");
