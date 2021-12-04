@@ -22,9 +22,7 @@ public class ChoreTemplates {
         return Sunday;
     }
 
-    public static String[] getBathroomChart() {
-        return BathroomChart;
-    }
+    public static String[] getBathroomChart() {return BathroomChart;}
 
     public static String[] getKitchenChart() {
         return KitchenChart;
