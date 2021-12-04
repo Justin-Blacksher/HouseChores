@@ -6,8 +6,8 @@ public class Graphics {
 
        // TODO: Split into two words maybe because it is so huge.
 
-       System.out.println("sCCCCCCCCCCCCChhhhhhh                                                                                   CCCCCCCCCCCCChhhhhhh                                                           tttt");
-       System.out.println("CCC::::::::::::Ch:::::h                                                                                CCC::::::::::::Ch:::::h                                                        ttt:::t");
+       System.out.println(" CCCCCCCCCCCCChhhhhhh                                                                                   CCCCCCCCCCCCChhhhhhh                                                           tttt");
+       System.out.println(" CCC::::::::::::Ch:::::h                                                                                CCC::::::::::::Ch:::::h                                                        ttt:::t");
        System.out.println(" CC:::::::::::::::Ch:::::h                                                                              CC:::::::::::::::Ch:::::h                                                        t:::::t");
        System.out.println(" C:::::CCCCCCCC::::Ch:::::h                                                                             C:::::CCCCCCCC::::Ch:::::h                                                        t:::::t");
        System.out.println(" C:::::C       CCCCCC h::::h hhhhh          ooooooooooo   rrrrr   rrrrrrrrr       eeeeeeeeeeee          C:::::C       CCCCCC h::::h hhhhh         aaaaaaaaaaaaa  rrrrr   rrrrrrrrr   ttttttt:::::ttttttt");
