@@ -1,6 +1,7 @@
 package com.company;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class ChoreChart {
 
@@ -8,18 +9,18 @@ public class ChoreChart {
 
     // TODO: Define private fields for ChoreChart Assigned - Justin
     private String chartName;
-    private Double choreStatus;
-    private ArrayList<String> choreList;
-    private Integer choreCount;
+    // Defines the percentage completed
+    private Double choreStatus = 0.0;
+    // Array list to handle chores
+    private ArrayList<String> choreList = new ArrayList<String>();
+    // Initialize the count to zero
+    private Integer choreCount = 0;
 
 
 
     // TODO: Define Default constructor Assigned - Justin
     public ChoreChart(){                            // Defines a default chore chart that is quick and dirty
         chartName = "Default Chart";                // Default chart name will always be Default Chart
-        choreStatus = 0.0;                          // Defines the percentage completed
-        choreCount = 0;                             // Initialize the count to zero
-        choreList = new ArrayList<String>();        // Array list to handle chores
 
         // TODO: Add more default chores to the default initializer
         // TODO: Create a function with a loop that deals with the counter field for cleaner code
@@ -29,9 +30,6 @@ public class ChoreChart {
     // TODO: Define a constructor that will take a custom chore list as a param
     public ChoreChart(String[] List, String chartName){
         this.chartName = chartName;
-        this.choreStatus = 0.0;
-        choreCount = 0;
-        choreList = new ArrayList<String>();
 
         // Add the chores from the list into the choreList and update the chore count
         for (String s : List) {
@@ -72,6 +70,8 @@ public class ChoreChart {
     public void setChoreCount(Integer choreCount) {
         this.choreCount = choreCount;
     }
+
+
     // ***************************** METHODS
     // TODO: Define function to receive children object
     // TODO: Define function that can add and remove chores from existing lists
