@@ -6,6 +6,7 @@
  */
 package com.company;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 
@@ -18,7 +19,7 @@ public class Children {
 
         numChildren = numKids; // Default value is equal to zero
         HashMap<String, ChoreChart> childrenCharts = new HashMap<>();
-        for (int i = 0; i < numKids; i++){      // Creates a List of children and associated Chore Chart
+        for (int i = 0; i < this.numChildren; i++){      // Creates a List of children and associated Chore Chart
             String tmpName;
             ChoreChart tmpChart;
 
@@ -30,17 +31,50 @@ public class Children {
 
         }
 
-        // TESTS
+
+
+
+
+
+
+
+        }
+
+
+    public Children(int numKids, ChoreChart chart) {
+        HashMap<String, ChoreChart> childrenCharts = new LinkedHashMap<>();
+        int numChildren = numKids;
+        System.out.println("Name the Chart: ");
+        chart.setChartName(scan.nextLine());
+
+        for (int i = 0; i < numChildren; i+s+) {
+            String tmpName;
+            ChoreChart tmpChart = chart;
+
+
+            System.out.println("Name of Child: ");
+            tmpName = scan.nextLine();
+
+
+            childrenCharts.put(tmpName, tmpChart);
+        }
         ChoreChart value = childrenCharts.get("James");
-        System.out.println(childrenCharts);
+        //System.out.println(childrenCharts);
         System.out.println(value.getChartName());
+        System.out.println(value.getChoreList());
 
         for (String i : childrenCharts.keySet()) {
             System.out.println(i);
         }
 
-
     }
+
+
+
+
+
+
+
 
     public int getNumChildren() {   // Getter for the number of children
         return numChildren;

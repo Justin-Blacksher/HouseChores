@@ -14,6 +14,9 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.util.Arrays;
 
+import static com.company.ChoreTemplates.*;
+import static com.company.ChoreTemplates.Sunday;
+
 
 public class Main {
 
@@ -41,28 +44,17 @@ public class Main {
     public static void setHasChoreChartFalse(){ hasChoreChart  = Boolean.FALSE;}
 
 
-    // TODO: Create methods to create custom chore list
-    public static ChoreChart setCustomChoreList(){
-        Scanner scan = new Scanner(System.in); // Scanner object to get user input
-        Scanner listNum = new Scanner(System.in); // Scanner to get other input
-        System.out.println("Setting Custom list:");
-        System.out.println("How many items for this list?");
-        int listItems = listNum.nextInt();
-        String[] customChores = new String[listItems];
-
-        for (int i = 0; i < listItems; i++){
-            System.out.println("Enter for position: " + i);
-            customChores[i] = scan.nextLine();
-
-        }
-        ChoreChart customChart = new ChoreChart(customChores, "customChart1");
-        return customChart;
-    }
 
 
     public static void main(String[] args) {
 
-        Children Blackshers = new Children(3);
+
+
+        ChoreChart myList = ChoreChart.setCustomChoreList();
+        Children Blackshers = new Children(3, myList);
+        // ChoreChart SundayChores = new ChoreChart(Sunday);
+        // Children Blackshers = new Children (3, SundayChores);
+        // Children Blackshers = new Children (3, "customChart1");
         // ChoreChart chart = setCustomChoreList(); Passed testing this is template for production
         // ChoreChart SundayChores = new ChoreChart(ChoreTemplates.Sunday, "Sunday Chores"); Passed Template
         // ChoreChart chores = new ChoreChart(); Passed for default constructor
