@@ -62,7 +62,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        Children Blackshers = new Children(3);
         // ChoreChart chart = setCustomChoreList(); Passed testing this is template for production
         // ChoreChart SundayChores = new ChoreChart(ChoreTemplates.Sunday, "Sunday Chores"); Passed Template
         // ChoreChart chores = new ChoreChart(); Passed for default constructor
