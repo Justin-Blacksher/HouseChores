@@ -85,7 +85,7 @@ public class Main {
 
 
 
-
+/*
         // ---------------------------------- Testing Graphics ------------------------------------------
         Graphics.EntryGraphic(); // Test to see if the Graphics class has passed
 
@@ -139,7 +139,7 @@ public class Main {
 
 
         //------------------------------------------- TESTING SECTION (CHILDREN) ---------------------------
-
+*/
 
     }
 }
