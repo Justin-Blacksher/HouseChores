@@ -6,11 +6,7 @@
  */
 
 package com.company;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
-
-
+import java.util.*;
 
 
 public class ChoreChart {
@@ -20,16 +16,30 @@ public class ChoreChart {
     // TODO: Define private fields for ChoreChart Assigned - Justin
     private String chartName;
     // Defines the percentage completed
-    private Double choreStatus = 0.0;
+    private Boolean choreStatus = Boolean.FALSE;
     // Array list to handle chores
     private ArrayList<Object> choreList = new ArrayList<Object>();
     // Initialize the count to zero
     private Integer choreCount = 0;
     // Initialize the Chores done
     private Integer choresDone = 0;
+    // HashMap of who completed what chores
+    public static HashMap<String, String> doneChoresList = new HashMap<>();
 
+    public static void choresDoneList(String name, String chore) {
+        doneChoresList.put(chore, name);
+    }
 
-// ----------------------------------------------------------------- TEMPLATE CHART
+    public static void printChoreList(){
+        for (String i : doneChoresList.keySet()){
+
+            System.out.println(doneChoresList.get(i) + " Completed " + i);
+
+        }
+
+    }
+
+    // ----------------------------------------------------------------- TEMPLATE CHART
     public ChoreChart(ArrayList tmp){ // Create Chart with template
 
         ArrayList tmpTEMP = tmp;
@@ -38,7 +48,7 @@ public class ChoreChart {
 
         choreList.addAll(tmpTEMP);
 
-         System.out.println(this.getChoreList());
+        setChoreCount(tmpTEMP.size());
 
 
     }
@@ -70,7 +80,7 @@ public class ChoreChart {
         return chartName;
     }
 
-    public Double getChoreStatus() {
+    public Boolean getChoreStatus() {
         return choreStatus;
     }
 
@@ -86,7 +96,7 @@ public class ChoreChart {
         this.chartName = chartName;
     }
 
-    public void setChoreStatus(Double choreStatus) {
+    public void setChoreStatus(Boolean choreStatus) {
         this.choreStatus = choreStatus;
     }
 
@@ -131,7 +141,8 @@ public class ChoreChart {
     public static ChoreChart setCustomChoreList(){
         Scanner scan = new Scanner(System.in); // Scanner object to get user input
         Scanner listNum = new Scanner(System.in); // Scanner to get other input
-        String nameDefault = "None";
+        System.out.print("Name the chart: ");
+        String nameDefault = scan.nextLine();
         System.out.println("Setting Custom list:");
         System.out.print("How many items for this list: ");
         int listItems = listNum.nextInt();
@@ -143,7 +154,18 @@ public class ChoreChart {
 
         }
         ChoreChart customChart = new ChoreChart(customChores, nameDefault);
+        customChart.setChoreCount(listItems);
         return customChart;
+    }
+    public static Boolean completeChoreChart(int num){
+        if ( num == 0){
+            Main.setHasChoreChartFalse();
+            return Boolean.FALSE;
+        }
+        else{
+            Main.setHasChoreChartTrue();
+            return Boolean.TRUE;
+        }
     }
 
 }

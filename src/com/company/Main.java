@@ -10,34 +10,42 @@
  * @description: Main file that will control the program as a whole.
  */
 package com.company;
-import java.util.Objects;
-import java.util.Scanner;
-import java.util.Arrays;
 
-import static com.company.ChoreTemplates.*;
-import static com.company.ChoreTemplates.Sunday;
 
 
 public class Main {
 
-    private static String[] args;
+
 
 
     // TODO: Define all constants
 
 
     // TODO: Create a checklist that will determine the formatting of the main menu and program flow
-    private static Boolean menuItemSelected = Boolean.FALSE; // Has a menu item been selected?
-    private static Boolean hasChildren = Boolean.FALSE;      // Has children been added?
-    private static Boolean hasChoreChart = Boolean.FALSE;    // Has a chore chart been created / loaded?
+
+    public static Boolean hasChildren = Boolean.FALSE;      // Has children been added?
+    public static Boolean hasChoreChart = Boolean.FALSE;    // Has a chore chart been created / loaded?
+
+
+
+    public static ChoreChart activeChart;
+    public static void setActiveChart(ChoreChart activeChart) {
+        Main.activeChart = activeChart;
+    }
+
+
+    public static Children activeChildren;
+    public static void setActiveChildren(Children activeChildren) {
+        Main.activeChildren = activeChildren;
+    }
+
 
     // TODO: Write Main functions specific to Main
     // TODO: Create Function that grabs all available chore charts
 
 
     // TODO: Create methods to change check variables
-    public static void setMenuItemSelectedTrue(){menuItemSelected = Boolean.TRUE;}
-    public static void setMenuItemSelectedFalse(){menuItemSelected = Boolean.FALSE;}
+
     public static void setHasChildrenTrue(){ hasChildren = Boolean.TRUE;}
     public static void setHasChildrenFalse(){ hasChildren = Boolean.FALSE;}
     public static void setHasChoreChartTrue(){ hasChoreChart = Boolean.TRUE;}
@@ -45,13 +53,31 @@ public class Main {
 
 
 
+    public static void clearTheScreen(){
+        //for (int i = 0; i < 50; ++i) System.out.println();
+    }
+
+
 
     public static void main(String[] args) {
 
 
+        MenuGen mainMenu = new MenuGen();
+        mainMenu.startMain();
 
-        ChoreChart myList = ChoreChart.setCustomChoreList();
-        Children Blackshers = new Children(3, myList);
+
+
+
+
+
+
+
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ TESTING
+        // ChoreChart myList = ChoreChart.setCustomChoreList();
+        // Children Blackshers = new Children(3, myList);
         // ChoreChart SundayChores = new ChoreChart(Sunday);
         // Children Blackshers = new Children (3, SundayChores);
         // Children Blackshers = new Children (3, "customChart1");
